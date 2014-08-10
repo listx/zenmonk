@@ -190,6 +190,9 @@ Also bind `class' to ((class color) (min-colors 89))."
 	`(font-lock-hex-face ((t (:foreground ,zm-blue :weight bold))))
 	`(font-lock-float-face ((t (:foreground ,zm-magenta))))
 	`(font-lock-octal-face ((t (:foreground ,zm-magenta :weight bold))))
+	; column-enforce-mode
+	`(column-enforce-face ((t (:foreground ,zm-bg
+		:background ,zm-red+2 :underline nil))))
 	; hl-line-mode
 	`(hl-line-face ((,class (:background ,zm-bg-05))
 					(t :weight bold)))
