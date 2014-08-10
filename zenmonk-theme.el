@@ -180,7 +180,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 	`(font-lock-string-face ((t (:foreground ,zm-red))))
 	`(font-lock-type-face ((t (:foreground ,zm-yellow+1 :weight bold))))
 	`(font-lock-variable-name-face ((t (:foreground ,zm-yellow))))
-	`(font-lock-warning-face ((t (:foreground ,zm-yellow-1 :weight bold))))
+	`(font-lock-warning-face ((t (:foreground ,zm-red+1 :weight bold))))
 
 	`(c-annotation-face ((t (:inherit font-lock-constant-face))))
 
