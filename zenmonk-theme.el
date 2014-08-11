@@ -289,7 +289,16 @@ Also bind `class' to ((class color) (min-colors 89))."
 	 'zenmonk
 	; ansi-color
 	`(ansi-color-names-vector
-		[,zm-bg ,zm-red ,zm-green ,zm-yellow ,zm-blue ,zm-magenta ,zm-cyan ,zm-fg]
+		[
+			,zm-bg
+			,zm-red
+			,zm-green
+			,zm-yellow
+			,zm-blue
+			,zm-magenta
+			,zm-cyan
+			,zm-fg
+		]
 	)
 	; fill-column-indicator
 	`(fci-rule-color ,zm-bg-05)
