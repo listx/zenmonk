@@ -95,8 +95,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 	)
 )
 
-; a custom syntax highlighting setup for just numbers (hex, decimal, etc.);
-; adopted from http://stackoverflow.com/questions/8860050/emacs-c-mode-how-do-you-syntax-highlight-hex-numbers
+; Highlight decimal, float, hex, and octal numbers.
 (make-face 'font-lock-hex-face)
 (setq font-lock-hex-face 'font-lock-hex-face)
 (make-face 'font-lock-float-face)
@@ -109,14 +108,20 @@ Also bind `class' to ((class color) (min-colors 89))."
 	'(lambda ()
 		(font-lock-add-keywords nil
 			'(
-				; Valid hex number (will highlight invalid suffix though)
+				; Hex number (will highlight invalid suffix though).
 				("\\b0x[[:xdigit:]]+[uUlL]*\\b" . font-lock-hex-face)
-				; Valid floating point number.
-				("\\(\\b[0-9]+\\)\\(\\.\\)\\{1\\}\\([0-9]+\\(e[-]?[0-9]+\\)?\\([lL]?\\|[dD]?[fF]?\\)\\)\\b" (1 font-lock-float-face) (2 font-lock-decimal-face) (3 font-lock-float-face))
-				; Valid decimal number.  Must be before octal regexes otherwise 0 and 0l
-				; will be highlighted as errors.  Will highlight invalid suffix though.
-				("\\b\\(\\(0\\|[1-9][0-9]*\\)[uUlL]*\\)\\b" 1 font-lock-decimal-face)
-				; Valid octal number
+				; Floating point number.
+				(
+					"\\(\\b[0-9]+\\)\\(\\.\\)\\{1\\}\\([0-9]+\\(e[-]?\d+\\)?\\([lL]?\\|[dD]?[fF]?\\)\\)\\b"
+					(1 font-lock-float-face)
+					(2 font-lock-decimal-face)
+					(3 font-lock-float-face))
+				; Decimal number. Must be before octal regexes otherwise
+				; 0 and 0l will be highlighted as errors. Will highlight
+				; invalid suffix though.
+				("\\b\\(\\(0\\|[1-9][0-9]*\\)[uUlL]*\\)\\b"
+					(1 font-lock-decimal-face))
+				; Octal number.
 				("\\b0[0-7]+[uUlL]*\\b" . font-lock-octal-face)
 			)
 		)
