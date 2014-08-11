@@ -200,7 +200,7 @@ Also bind `class' to ((class color) (min-colors 89))."
 	`(font-lock-comment-delimiter-face ((t (:foreground ,zm-green-1))))
 	`(font-lock-constant-face ((t (:foreground ,zm-red+1 :weight bold))))
 	`(font-lock-doc-face ((t (:foreground ,zm-green+2))))
-	`(font-lock-function-name-face ((t (:foreground ,zm-cyan))))
+	`(font-lock-function-name-face ((t (:foreground ,zm-fg :weight bold))))
 	`(font-lock-keyword-face ((t (:foreground ,zm-orange+1 :weight bold))))
 	`(font-lock-negation-char-face ((t (:foreground ,zm-yellow :weight bold))))
 	`(font-lock-operator-face ((t (:foreground ,zm-blue-1 :weight bold))))
