@@ -20,16 +20,7 @@ Download `zenmonk-theme.el` to the directory `~/.emacs.d/themes/`. Add this to y
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'zenmonk t)
 ```
-
-Now you can load the theme with the interactive function `load-theme` like this:
-
-`M-x load-theme RET zenmonk`
-
-. Or, you can do make it permanent with
-
-```lisp
-(load-theme 'zenmonk t)
-```
+.
 
 # Design Changes Compared to the Original Zenburn
 
