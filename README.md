@@ -68,7 +68,7 @@ You can create these custom faces by customizing your `~/.emacs` file like in th
                     ; Valid hex number (will highlight invalid suffix though)
                     ("\\b0x[[:xdigit:]]+[uUlL]*\\b" . font-lock-hex-face)
                     ; Valid floating point number.
-                    ("\\(\\b[0-9]+\\|\\)\\(\\.\\)\\([0-9]+\\(e[-]?[0-9]+\\)?\\([lL]?\\|[dD]?[fF]?\\)\\)\\b" (1 font-lock-float-face) (2 font-lock-decimal-face) (3 font-lock-float-face))
+                    ("\\(\\b[0-9]+\\)\\(\\.\\)\\{1\\}\\([0-9]+\\(e[-]?[0-9]+\\)?\\([lL]?\\|[dD]?[fF]?\\)\\)\\b" (1 font-lock-float-face) (2 font-lock-decimal-face) (3 font-lock-float-face))
                     ; Valid decimal number.  Must be before octal regexes otherwise 0 and 0l
                     ; will be highlighted as errors.  Will highlight invalid suffix though.
                     ("\\b\\(\\(0\\|[1-9][0-9]*\\)[uUlL]*\\)\\b" 1 font-lock-decimal-face)
