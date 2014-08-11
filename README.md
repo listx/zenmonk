@@ -7,7 +7,7 @@ developed by Jani Nurminen.
 This version was derived from [zenburn-emacs](https://github.com/bbatsov/zenburn-emacs) by Bozhidar Batsov.
 
 It is meant to be used alongside [Evil](https://gitorious.org/evil/pages/Home),
-to capture the full spirit of the Zenburn (and hence, Vim), experience. ;)
+to capture the full spirit of the Zenburn (and hence, Vim) experience. ;)
 
 ## Installation
 
